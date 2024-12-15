@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo Online</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #f0f0f0, #d9d9d9);
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            width: 100%;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 1.5rem;
+        }
+
+        .catalogo {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .item {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transform: scale(1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .item-content {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .item-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .item-price {
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: #333;
+        }
+
+        footer {
+            margin-top: auto;
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Catálogo Online
+    </header>
+
+    <div class="catalogo">
+        <div class="item">
+            <img src="https://via.placeholder.com/300" alt="Produto 1">
+            <div class="item-content">
+                <div class="item-title">Produto 1</div>
+                <div class="item-price">R$ 50,00</div>
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="https://via.placeholder.com/300" alt="Produto 2">
+            <div class="item-content">
+                <div class="item-title">Produto 2</div>
+                <div class="item-price">R$ 75,00</div>
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="https://via.placeholder.com/300" alt="Produto 3">
+            <div class="item-content">
+                <div class="item-title">Produto 3</div>
+                <div class="item-price">R$ 30,00</div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 - Seu Catálogo Online
+    </footer>
+
+    <script>
+        // Exemplo de animação com JS
+        document.querySelectorAll('.item').forEach(item => {
+            item.addEventListener('click', () => {
+                alert(`Você clicou no ${item.querySelector('.item-title').textContent}!`);
+            });
+        });
+    </script>
+</body>
+</html>

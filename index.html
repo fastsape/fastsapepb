@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo Online</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #001f3f, #011627);
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            background-color: #011627;
+            color: white;
+            width: 100%;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        header img {
+            max-height: 150px;
+            margin-right: 15px;
+        }
+
+        .social-media {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .social-media a {
+            margin: 0 15px;
+        }
+
+        .social-media img {
+            width: 40px;
+            height: 40px;
+        }
+
+        .catalogo {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .item {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transform: scale(1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .item-content {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .item-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #011627;
+            margin-bottom: 10px;
+        }
+
+        .item-price {
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .item-payment {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .add-to-cart {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .add-to-cart button {
+            background-color: #011627;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .add-to-cart button:hover {
+            background-color: #001f3f;
+        }
+
+        footer {
+            margin-top: auto;
+            background-color: #011627;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            width: 100%;
+        }
+
+        .social-links {
+            margin-top: 10px;
+        }
+
+        .social-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 1rem;
+        }
+
+        .social-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        function finalizarCompra() {
+            window.location.href = "https://wa.me/558393243735?text=Quero+finalizar+minha+compra";
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <img src="imagem/logo.web.png">
+        <span>Catálogo Online</span>
+    </header>
+
+    <!-- Redes sociais acima do catálogo -->
+    <div class="social-media">
+        <a href="https://wa.me/558393243735" target="_blank">
+            <img src="imagem/logo.web.webp" alt="WhatsApp">
+        </a>
+        <a href="https://www.instagram.com/fast.sape/" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg" alt="Instagram">
+        </a>
+    </div>
+
+    <!-- Catálogo -->
+    <div class="catalogo">
+        <div class="item">
+            <img src="https://down-br.img.susercontent.com/file/sg-11134201-7rd70-lvvzwokhwbisf2@resize_w450_nl.webp" alt="Suporte luxo P/ Smartphone e Tablet">
+            <div class="item-content">
+                <h3 class="item-title">Suporte luxo (Astronauta) P/ Smartphone e Tablet (Apenas o Suporte)</h3>
+                <p class="item-price">À vista ou Pix: R$ 22,00</p>
+                <p class="item-payment">2x R$ 12,00 ou 3x R$ 8,40</p>
+                <div class="add-to-cart">
+                    <button onclick="finalizarCompra()">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_2X_901477-MLB53861609367_022023-F.webp" alt="Headphone – Fone sem fio P9 Air Max">
+            <div class="item-content">
+                <h3 class="item-title">Headphone – Fone sem fio P9 Air Max</h3>
+                <p class="item-price">À vista ou Pix: R$ 45,00</p>
+                <p class="item-payment">2x R$ 23,50 ou 3x R$ 16,00</p>
+                <div class="add-to-cart">
+                    <button onclick="finalizarCompra()">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-lua6uapxmnhh9a.webp" alt="Suporte P/ Celular Ar condicionado">
+            <div class="item-content">
+                <h3 class="item-title">Suporte P/ Celular Ar condicionado</h3>
+                <p class="item-price">À vista ou Pix: R$ 12,00</p>
+                <p class="item-payment">2x R$ 7,00 ou 3x R$ 5,00</p>
+                <div class="add-to-cart">
+                    <button onclick="finalizarCompra()">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="https://a-static.mlcdn.com.br/800x560/tripe-para-celular-suporte-mesa-flexivel-camera-pedestal-360-tomate/aevimports/mtg-023az/e3e27b5e933552d616414d1f18136031.jpeg" alt="Suporte P/ celular câmera flexível tripé universal">
+            <div class="item-content">
+                <h3 class="item-title">Suporte P/ celular câmera flexível tripé universal</h3>
+                <p class="item-price">À vista ou Pix: R$ 12,00</p>
+                <p class="item-payment">2x R$ 7,00 ou 3x R$ 5,00</p>
+                <div class="add-to-cart">
+                    <button onclick="finalizarCompra()">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="https://images.tcdn.com.br/img/img_prod/649613/adaptador_tipo_c_macho_para_v8_femea_at_tpc_v8_4033_1_a921a56ae2ace66c2d61d5ff6eab97b5.jpg" alt="Adaptador de V8 P/ TC">
+            <div class="item-content">
+                <h3 class="item-title">Adaptador de V8 P/ TC</h3>
+                <p class="item-price">À vista ou Pix: R$ 5,00</p>
+                <p class="item-payment">2x R$ 3,50 ou 3x R$ 2,70</p>
+                <div class="add-to-cart">
+                    <button onclick="finalizarCompra()">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="https://images.tcdn.com.br/img/img_prod/643493/copia_carregador_samsung_turbo_travel_adapter_3_0_30w_type_c_1167_1_9ab3ad1eff4e8c93489f4a63228c7ffc.jpg" alt="Carregador Samsung Turbo completo">
+            <div class="item-content">
+                <h3 class="item-title">Carregador Samsung Turbo completo</h3>
+                <p class="item-price">À vista ou Pix: R$ 40,00</p>
+                <p class="item-payment">2x R$ 21,00 ou 3x R$ 14,40</p>
+                <div class="add-to-cart">
+                    <button onclick="finalizarCompra()">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="https://m.media-amazon.com/images/I/81+EIIBY5ML._AC_SX679_.jpg" alt="Carregador Motorola Turbo Completo">
+            <div class="item-content">
+                <h3 class="item-title">Carregador Motorola Turbo Completo</h3>
+                <p class="item-price">À vista ou Pix: R$ 40,00</p>
+                <p class="item-payment">2x R$ 21,00 ou 3x R$ 14,40</p>
+                <div class="add-to-cart">
+                    <button onclick="finalizarCompra()">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="https://img.kalunga.com.br/fotosdeprodutos/223504z.jpg?_gl=1*rxk4jj*_gcl_au*NjQzNTY3MjA1LjE3MzQyOTQ2NTE." alt="Pen Drive 16 GB">
+            <div class="item-content">
+                <h3 class="item-title">Pen Drive 16 GB</h3>
+                <p class="item-price">À vista ou Pix: R$ 45,00</p>
+                <p class="item-payment">2x R$ 23,50 ou 3x R$ 16,00</p>
+                <div class="add-to-cart">
+                    <button onclick="finalizarCompra()">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="https://static.wixstatic.com/media/3f234a_cc1179306b084ec3a15d12a732b90ad2~mv2.png/v1/fill/w_500,h_281,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/3f234a_cc1179306b084ec3a15d12a732b90ad2~mv2.png" alt="Mouse Sem fio - A Pilha">
+            <div class="item-content">
+                <h3 class="item-title">Mouse Sem fio - A Pilha</h3>
+                <p class="item-price">À vista ou Pix: R$ 15,00</p>
+                <p class="item-payment">2x R$ 8,50 ou 3x R$ 6,00</p>
+                <div class="add-to-cart">
+                    <button onclick="finalizarCompra()">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="item">
+            <img src="https://m.media-amazon.com/images/I/51zcg+LN8OL._AC_SX679_.jpg" alt="Fone de ouvido com fio HEADSET">
+            <div class="item-content">
+                <h3 class="item-title">Fone de ouvido com fio HEADSET</h3>
+                <p class="item-price">À vista ou Pix: R$ 15,00</p>
+                <p class="item-payment">2x R$ 8,50 ou 3x R$ 6,00</p>
+                <div class="add-to-cart">
+                    <button onclick="finalizarCompra()">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="https://a-static.mlcdn.com.br/800x560/fonte-cabeca-para-carregador-preto-mxt/oliststore/mglu5tifv7x3e4ky/a35823c5315c68e270e77ec6fa4d9c78.jpeg" alt="Fonte de Carregador Simples">
+            <div class="item-content">
+                <h3 class="item-title">Fonte de Carregador Simples</h3>
+                <p class="item-price">À vista ou Pix: R$ 12,00</p>
+                <p class="item-payment">2x R$ 7,00 ou 3x R$ 5,00</p>
+                <div class="add-to-cart">
+                    <button onclick="finalizarCompra()">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="https://a-static.mlcdn.com.br/800x560/fone-de-ouvido-bluetooth-5-0-par-sem-fio-duplo-caixa-carrega-quick-store/shopnewseleetrocell/2117/6ee2cc2183fe915a85c2f044f22553ed.jpeg" alt="Fone Bluethooth 5.0">
+            <div class="item-content">
+                <h3 class="item-title">Fone Bluethooth 5.0</h3>
+                <p class="item-price">À vista ou Pix: R$ 40,00</p>
+                <p class="item-payment">2x R$ 21,00 ou 3x R$ 14,40</p>
+                <div class="add-to-cart">
+                    <button onclick="finalizarCompra()">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_885167-MLB69723142882_052023-O.webp" alt="Cabo carregador V8 Reforçado -Design especial, evita enrolamento e extração">
+            <div class="item-content">
+                <h3 class="item-title">Cabo carregador V8 Reforçado</h3>
+                <p class="item-price">À vista ou Pix: R$ 15,00</p>
+                <p class="item-payment">2x R$ 8,50 ou 3x R$ 6,00</p>
+                <div class="add-to-cart">
+                    <button onclick="finalizarCompra()">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_717673-MLU77323061883_062024-O.webp" alt="Fone de Ouvido com fio LIGTHNING VX CASE">
+            <div class="item-content">
+                <h3 class="item-title">Fone de Ouvido com fio LIGTHNING VX CASE</h3>
+                <p class="item-price">À vista ou Pix: R$ 18,00</p>
+                <p class="item-payment">2x R$ 10,00 ou 3x R$ 7,00</p>
+                <div class="add-to-cart">
+                    <button onclick="finalizarCompra()">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="https://www.vxcase.com.br/cdn/shop/products/fones-de-ouvido-lightning-vx-case-cor-branco-1.png?v=1683242110&width=1500" alt="Fone com fio IOS">
+            <div class="item-content">
+                <h3 class="item-title">Fone com fio IOS</h3>
+                <p class="item-price">À vista ou Pix: R$ 15,00</p>
+                <p class="item-payment">2x R$ 8,50 ou 3x R$ 6,00</p>
+                <div class="add-to-cart">
+                    <button onclick="finalizarCompra()">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="https://a-static.mlcdn.com.br/800x560/teclado-preto-a-prova-d-agua-ley-1605-escritorio-lehmox/pdc-presentes/ley1605/ddaa15ac953c1e930080c9ea31e8b1a0.jpeg" alt="Teclado Impermeável">
+            <div class="item-content">
+                <h3 class="item-title">Teclado Impermeável</h3>
+                <p class="item-price">À vista ou Pix: R$ 42,00</p>
+                <p class="item-payment">2x R$ 22,00 ou 3x R$ 15,00</p>
+                <div class="add-to-cart">
+                    <button onclick="finalizarCompra()">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-lo8gdpc8okvdbd.webp" alt="Kit teclado + mouse Gamer Mecânico com LED">
+            <div class="item-content">
+                <h3 class="item-title">Kit teclado + mouse Gamer Mecânico com LED</h3>
+                <p class="item-price">À vista ou Pix: R$ 75,00</p>
+                <p class="item-payment">2x R$ 38,50 ou 3x R$ 26,00</p>
+                <div class="add-to-cart">
+                    <button onclick="finalizarCompra()">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="item">
+            <img src="https://papelariacriativa.com.br/wp-content/uploads/mouse-fy-optico-usb-1000dpi-preto-m201-mo01-1-1.jpg" alt="Mouse USB">
+            <div class="item-content">
+                <h3 class="item-title">Mouse USB</h3>
+                <p class="item-price">À vista ou Pix: R$ 15,00</p>
+                <p class="item-payment">2x R$ 8,50 ou 3x R$ 6,00</p>
+                <div class="add-to-cart">
+                    <button onclick="finalizarCompra()">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="https://a-static.mlcdn.com.br/1500x1500/carregador-turbo-power-50w-duo-motorola-porta-usb-c-e-usb-a-original/yourhype/2419/cae0d8b64241b944a1b0af122c72dfd5.jpeg" alt="Fonte Carregador 50w Turbo - 2 entradas TC e USB">
+            <div class="item-content">
+                <h3 class="item-title">Fonte Carregador 50w Turbo - 2 entradas TC e USB</h3>
+                <p class="item-price">À vista ou Pix: R$ 42,00</p>
+                <p class="item-payment">2x R$ 22,00 ou 3x R$ 15,00</p>
+                <div class="add-to-cart">
+                    <button onclick="finalizarCompra()">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="https://m.media-amazon.com/images/I/51l5HURpwpL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Cartão de Memória 128 GB SanDisk Micro SD">
+            <div class="item-content">
+                <h3 class="item-title">Cartão de Memória 128 GB SanDisk Micro SD</h3>
+                <p class="item-price">À vista ou Pix: R$ 50,00</p>
+                <p class="item-payment">2x R$ 26,00 ou 3x R$ 18,00</p>
+                <div class="add-to-cart">
+                    <button onclick="finalizarCompra()">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="https://down-br.img.susercontent.com/file/br-11134207-7qukw-lgiphur44b5r10.webp" alt="Smartwatch D20 (Preto – Rosa- Branco)">
+            <div class="item-content">
+                <h3 class="item-title">Smartwatch D20 (Preto – Rosa- Branco)</h3>
+                <p class="item-price">À vista ou Pix: R$ 43,00</p>
+                <p class="item-payment">2x R$ 22,50 ou 3x R$ 15,70</p>
+                <div class="add-to-cart">
+                    <button onclick="finalizarCompra()">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="https://dcdn.mitiendanube.com/stores/001/426/908/products/caixa_de_som_padr_o_para_pc_e_notebook_inova_-_lt016_031-5093bcdd48a78781e116142833962982-1024-1024.webp" alt="Caixas de som P/ PC">
+            <div class="item-content">
+                <h3 class="item-title">Caixas de som P/ PC</h3>
+                <p class="item-price">À vista ou Pix: R$ 40,00</p>
+                <p class="item-payment">2x R$ 21,00 ou 3x R$ 14,40</p>
+                <div class="add-to-cart">
+                    <button onclick="finalizarCompra()">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-lyirhwov6w7p04.webp" alt="Fone B3 sem Fio 5.1 (Esporte)">
+            <div class="item-content">
+                <h3 class="item-title">Fone B3 sem Fio 5.1 (Esporte)</h3>
+                <p class="item-price">À vista ou Pix: R$ 35,00</p>
+                <p class="item-payment">2x R$ 18,50 ou 3x R$ 12,70</p>
+                <div class="add-to-cart">
+                    <button onclick="finalizarCompra()">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="https://down-br.img.susercontent.com/file/037ff4fddb6b163aa786339c01d8ad6b.webp" alt="Mini teclado sem fio, TV, PC, PAD, ANDROID TV BOX, PS3 e etc">
+            <div class="item-content">
+                <h3 class="item-title">Mini teclado sem fio, TV, PC, PARA, ANDROID TV BOX, PS3 e etc</h3>
+                <p class="item-price">À vista ou Pix: R$ 40,00</p>
+                <p class="item-payment">2x R$ 21,00 ou 3x R$ 14,40</p>
+                <div class="add-to-cart">
+                    <button onclick="finalizarCompra()">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-lmhuqr0grrhyf5.webp" alt="Cabo Carregador turbo  TC, V8, IOS emborrachado">
+            <div class="item-content">
+                <h3 class="item-title">Cabo Carregador turbo TC, V8, IOS emborrachado</h3>
+                <p class="item-price">À vista ou Pix: R$ 15,00</p>
+                <p class="item-payment">2x R$ 8,50 ou 3x R$ 6,00</p>
+                <div class="add-to-cart">
+                    <button onclick="finalizarCompra()">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="https://images.tcdn.com.br/img/img_prod/1248100/smartwatch_m9_ultra_mini_rosa_327_1_459abe6af12536506ac288425cb7eeb1.png" alt="Smartwatch S9 Ultra (Preto – Rosa)">
+            <div class="item-content">
+                <h3 class="item-title">Smartwatch S9 Ultra (Rosa)</h3>
+                <p class="item-price">À vista ou Pix: R$ 75,00</p>
+                <p class="item-payment">2x R$ 38,50 ou 3x R$ 26,00</p>
+                <div class="add-to-cart">
+                    <button onclick="finalizarCompra()">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="https://a-static.mlcdn.com.br/800x560/relogio-smartwatch-u9-ultra-series-9-original-nfc-gps-s9-nf-microwear/rvrcomercio/relogio-u9ultra-preto/d90b0e38555556cc7ed20f0b9d18dcaf.jpeg" alt="Smartwatch S9 Ultra (Preto – Rosa)">
+            <div class="item-content">
+                <h3 class="item-title">Smartwatch S9 Ultra (Preto)</h3>
+                <p class="item-price">À vista ou Pix: R$ 75,00</p>
+                <p class="item-payment">2x R$ 38,50 ou 3x R$ 26,00</p>
+                <div class="add-to-cart">
+                    <button onclick="finalizarCompra()">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_929031-MLU73883506099_012024-O.webp" alt="Mini caixa de som COGUMELO sem fio">
+            <div class="item-content">
+                <h3 class="item-title">Mini caixa de som COGUMELO sem fio</h3>
+                <p class="item-price">À vista ou Pix: R$ 40,00</p>
+                <p class="item-payment">2x R$ 21,00 ou 3x R$ 14,40</p>
+                <div class="add-to-cart">
+                    <button onclick="finalizarCompra()">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="https://a-static.mlcdn.com.br/1500x1500/amplificador-de-tela-10-polegadas-doxa/olistplus/opmuaoorum8nmdou/dacba3c3dde4e7fe7bca24440fc17254.jpeg" alt="Amplificadora de Tela - 10 Polegadas">
+            <div class="item-content">
+                <h3 class="item-title">Amplificadora de Tela - 10 Polegadas</h3>
+                <p class="item-price">À vista ou Pix: R$ 22,00</p>
+                <p class="item-payment">2x R$ 12,00 ou 3x R$ 8,40</p>
+                <div class="add-to-cart">
+                    <button onclick="finalizarCompra()">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="https://down-br.img.susercontent.com/file/sg-11134201-7rdxe-m17ezg55i51m7c.webp" alt="Bracelet Smart Band Inteligente (preto)">
+            <div class="item-content">
+                <h3 class="item-title">Bracelet Smart Band Inteligente (preto) - Relógio Esportivo Smart Band Inteligente Frequência Cardíaca</h3>
+                <p class="item-price">À vista ou Pix: R$ 50,00</p>
+                <p class="item-payment">2x R$ 26,00 ou 3x R$ 17,70</p>
+                <div class="add-to-cart">
+                    <button onclick="finalizarCompra()">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQYXWHJyvbDSVyv98Xf9ewsH2JVyXUgArs2uOAwtGpmPWIuIsNUJjkrZS5Oee-MHt18Qs3kaixBGcd1JXYygy_zRFrhD5vzUoCTJ9xiKeNW00PjNkB34K7w" alt="Iluminaria com Caixa de som Bluetooth">
+            <div class="item-content">
+                <h3 class="item-title">Iluminaria Astronauta com Caixa de som Bluetooth</h3>
+                <p class="item-price">À vista ou Pix: R$ 78,00</p>
+                <p class="item-payment">2x R$ 40,00 ou 3x R$ 27,40</p>
+                <div class="add-to-cart">
+                    <button onclick="finalizarCompra()">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-lybibijavvkl58.webp" alt="Fone TWS Air Mini Earbuds Sem fio LED Power">
+            <div class="item-content">
+                <h3 class="item-title">Fone TWS Air Mini Earbuds Sem fio LED Power</h3>
+                <p class="item-price">À vista ou Pix: R$ 47,00</p>
+                <p class="item-payment">2x R$ 24,50 ou 3x R$ 17,00</p>
+                <div class="add-to-cart">
+                    <button onclick="finalizarCompra()">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="https://down-br.img.susercontent.com/file/15def091bca152a84a5e036c05fff779.webp" alt="Carregador portátil por indução P/ iPHONE">
+            <div class="item-content">
+                <h3 class="item-title">Carregador portátil por indução P/ iPHONE</h3>
+                <p class="item-price">À vista ou Pix: R$ 76,00</p>
+                <p class="item-payment">2x R$ 39,00 ou 3x R$ 26,40</p>
+                <div class="add-to-cart">
+                    <button onclick="finalizarCompra()">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="https://down-br.img.susercontent.com/file/sg-11134201-7rdye-m132gbuwth1j17.webp" alt="Fone M25 sem fio – TWS com controle de redução de ruídos">
+            <div class="item-content">
+                <h3 class="item-title">Fone M25 sem fio – TWS com controle de redução de ruídos</h3>
+                <p class="item-price">À vista ou Pix: R$ 58,00</p>
+                <p class="item-payment">2x R$ 30,00 ou 3x R$ 20,70</p>
+                <div class="add-to-cart">
+                    <button onclick="finalizarCompra()">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="https://down-br.img.susercontent.com/file/7966ad4e88dbe8dfb162195a7ad86951.webp" alt="Controle GAMEPAD W11 – controle P/ celular">
+            <div class="item-content">
+                <h3 class="item-title">Controle GAMEPAD W11 – controle P/ celular</h3>
+                <p class="item-price">À vista ou Pix: R$ 29,00</p>
+                <p class="item-payment">2x R$ 16,00 ou 3x R$ 11,00</p>
+                <div class="add-to-cart">
+                    <button onclick="finalizarCompra()">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="https://down-br.img.susercontent.com/file/02fed5dc1c39778510ca5ca9ec8ef765.webp" alt="Canetas Touch – 3 em 1 Touch, esferográfica, suporte de mesa">
+            <div class="item-content">
+                <h3 class="item-title">Canetas Touch – 3 em 1 Touch, esferográfica, suporte de mesa</h3>
+                <p class="item-price">À vista ou Pix: R$ 13,00</p>
+                <p class="item-payment">2x R$ 7,50 ou 3x R$ 5,20</p>
+                <div class="add-to-cart">
+                    <button onclick="finalizarCompra()">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-m2legdb6elmtc3.webp" alt="Caixa de som GATINHA P/ PC, Notebook, Tablet, Smartphone">
+            <div class="item-content">
+                <h3 class="item-title">Caixa de som GATINHA P/ PC, Notebook, Tablet, Smartphone</h3>
+                <p class="item-price">À vista ou Pix: R$ 58,00</p>
+                <p class="item-payment">2x R$ 30,00 ou 3x R$ 19,70</p>
+                <div class="add-to-cart">
+                    <button onclick="finalizarCompra()">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-lxl0jfktlh33a5.webp" alt="Cabo HDMI Full HD">
+            <div class="item-content">
+                <h3 class="item-title">Cabo HDMI Full HD</h3>
+                <p class="item-price">À vista ou Pix: R$ 27,00</p>
+                <p class="item-payment">2x R$ 14,50 ou 3x R$ 10,00</p>
+                <div class="add-to-cart">
+                    <button onclick="finalizarCompra()">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="https://down-br.img.susercontent.com/file/sg-11134201-7rdvo-ly0vxe9wb8eg4f.webp" alt="Carregador Portátil Chaveiro">
+            <div class="item-content">
+                <h3 class="item-title">Carregador Portátil Chaveiro TC </h3>
+                <p class="item-price">À vista ou Pix: R$ 40,00</p>
+                <p class="item-payment">2x R$ 21,00 ou 3x R$ 14,40</p>
+                <div class="add-to-cart">
+                    <button onclick="finalizarCompra()">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="https://down-br.img.susercontent.com/file/sg-11134201-7rdvh-m0u59etcavz9f4.webp" alt="Headphone Gamer com fio Warrior Haver P2">
+            <div class="item-content">
+                <h3 class="item-title">Headphone Gamer com fio Warrior Haver P2</h3>
+                <p class="item-price">À vista ou Pix: R$ 50,00</p>
+                <p class="item-payment">2x R$ 26,00 ou 3x R$ 17,70</p>
+                <div class="add-to-cart">
+                    <button onclick="finalizarCompra()">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </div>
+        
+        
+</div>
+        
+    </div>
+
+    <footer>
+        <p>Catálogo Online - Todos os direitos reservados da Fast Informática com a programadora Profissional, "Otácia Cristina"</p>
+        <div class="social-links">
+            <a href="#">Política de Privacidade</a> |
+            <a href="#">Termos de Uso</a>
+        </div>
+    </footer>
+</body>
+</html>
